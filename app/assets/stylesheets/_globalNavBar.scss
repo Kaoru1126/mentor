@@ -1,0 +1,51 @@
+.navBar__box {
+  display: flex;
+  align-items: center;
+  background-color: $navDGray;
+  padding: 20px;
+}
+
+.logo__box{
+flex:1;
+margin-right: 20px;
+}
+
+
+// .icon__box {
+
+// }
+
+.search__box {
+// width: 100%;
+flex:1;
+}
+
+.searchBar {
+  color: white;
+  width: 50%;
+}
+
+.loggedOut__box {
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 30px;
+
+}
+
+.loggedOut--BTN{
+  font-weight: bold;
+  color: $btnTextGreen;
+  text-decoration: none;
+}
+
+.loggedIn--BTN {
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  padding: 5px;
+}
+
+
+.loggedIn__box {
+
+}
