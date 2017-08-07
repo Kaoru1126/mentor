@@ -14,36 +14,34 @@
  - has_many : reviews
 
 
-## mentor table
+## teacher
 | Column       | Type        | Options                        |
 |--------------|-------------|--------------------------------|
 | name         | string      | null: false                    |
 | school_id    | int         | foreign_key: true              |
 
-### Mentor's model Association
+### teacher's model Association
  - belongs_to : user
  - belongs_to : school
  - has_many : reviews
  - has_many : characters
 
 
-## reviews table (mentor_review)
-
+## reviews table (teacher_review)
 | Column     | Type        | Options                        |
 |------------|-------------|--------------------------------|
 | user_id    | int         | null: false, foreign_key: true |
-| mentor_id  | int         | null: false, foreign_key: true |
+| teacher_id | int         | null: false, foreign_key: true |
 | content    | text        | null: false                    |
 | rate       | int         | null: false                    | delete?
 
 ### review's model Association
  - belongs_to : user
- - belongs_to : mentor
+ - belongs_to : teacher
  - has_many :rates
 
 
-## mentorRate table
-
+## teacherRate table
 | Column     | Type        | Options                        |
 |------------|-------------|--------------------------------|
 | review_id  | int         | null: false, foreign_key: true |
@@ -58,20 +56,15 @@
  - belongs_to : review
 
 
-## school table
 
+## school table
 | Column     | Type        | Options                        |
 |------------|-------------|--------------------------------|
 | name       | string      | null: false, foreign_key: true |
 | place      | string      | null: false                    |
-|            | int         | null: false                    |
-| kindness   | int         | null: false                    |
-| strictness | int         | null: false                    |
-| sexiness   | int         |                                |
 
-
-### character's model Association
- - belongs_to : review
+### school's model Association
+ - has_many : teachers
 
 
 ## schoolRate table
