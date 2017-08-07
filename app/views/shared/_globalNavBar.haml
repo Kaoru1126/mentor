@@ -7,7 +7,7 @@
       %input.searchBar{:name => "keyword", :placeholder => "検索", :type => "text", :value => ""}/
   - if user_signed_in?
     .loggedOut__box
-      = link_to "ログアウト", destroy_user_session_path, class: "loggedOut--BTN"
+      = link_to "ログアウト", destroy_user_session_path, class: "loggedout--BTN"
   - else
     .loggedIn__box
-      = link_to "ログイン/サインイン", user_session_path, class: "loggedIn--BTN"
+      = link_to "ログイン/サインイン", user_session_path, class: "loggedin--BTN"
